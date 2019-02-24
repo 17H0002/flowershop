@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FlowerShop
 {
-    public class Order : IOrder, IIdentified
+    public class Order : IOrder, IIdentified, IOrderDAO
     {
         private List<Flower> flowers;
         private bool isDelivered = false;
@@ -51,6 +51,34 @@ namespace FlowerShop
         }
 
         public void Deliver()
+        {
+            
+            this.isDelivered = true;
+            
+            
+        }
+
+        public IOrder GetOrder(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int AddOrder(IClient client)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddFlower(IClient order, IClient flower)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetDelivered(IOrder order)
+        {
+            this.isDelivered = true;
+        }
+
+        public void RemoveFlower(IClient order, IClient flower)
         {
             throw new NotImplementedException();
         }
